@@ -13,11 +13,24 @@ class DesktopView extends StatelessWidget {
       body: Row(
         children: [
           drawer,
-          const Center(
-            child: Text("Tablet"),
-          )
+          const _Main(),
         ],
       ),
+    );
+  }
+}
+
+class _Main extends StatelessWidget {
+  const _Main({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text("Desktop/Web View"),
+      ],
     );
   }
 }

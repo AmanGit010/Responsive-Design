@@ -10,13 +10,23 @@ class TabletView extends StatelessWidget {
       backgroundColor: Colors.red,
       appBar: appBar,
       body: Row(
-        children: [
-          drawer,
-          const Center(
-            child: Text("Tablet"),
-          )
-        ],
+        children: [drawer, const _Main()],
       ),
+    );
+  }
+}
+
+class _Main extends StatelessWidget {
+  const _Main({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text("Tablet View"),
+      ],
     );
   }
 }
